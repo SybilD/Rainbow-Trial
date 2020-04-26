@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>My First Rainbow Application</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+        <script src="./vendors-sdk.min.js"></script>
+        <script src="./rainbow-sdk.min.js"></script>
+
+        <script src="./chatpage.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="chatpage_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+        <script src="jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        
+        <!-- Login form displayed only at the beginning 
+        <div id="login">
+            <div class="container-login100">
+                <div class="wrap-login100">
+            
+            <span class="WelcomeHeader">
+                Welcome to Rainbow Agent Page
+            </span>
+            <form class="form-signin" id="loginForm">
+            
+            <label for="username" class="sr-only">Email address</label>
+            <input type="email" id="username" class="form-control" placeholder="Email address" required autofocus>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Password" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="signInButton">Sign in</button>
+            </form>
+            <div id="status"></div>
+         </div>
+            </div>
+        </div>
+         end of login form -->
+
+        <div class="wrapper">
+            <!-- <div id="nameDisplayed" visibility='hidden'></div> -->
+            <div id="statusBar">
+                <button id="callButton" class="btn btn-block" >call</button>
+                <video id="minivideo" autoplay muted></video>
+                <audio id="globalAudioTag" autoplay style="display:none;"></audio>
+                <video id="largevideo" autoplay></video>
+                <video id="globalVideoTag" autoplay style="display:none;"></video>
+                
+                <button id="signoutButton" class="btn btn-block" >signout </button>
+                <div id="line"></div>
+                <div id = "displayInfo"></div>
+            </div>
+            <!-- <div id="contactList">
+                <button id="CustomerButton1" class="btn btn-block" >  Chat With</button>
+                <div id="line"></div>
+                
+            </div> -->
+            
+
+            <div id="conversationHeader">
+                <h1>Chatting with:</h1>
+            </div>
+            <div id="chatMessages" >
+                
+
+                <div class="all">
+                    <div class="cards">
+                        <!--
+                      <div class="card shadow-1">
+                        <div class="upper-text">Name</div>
+                            <div class="speech-bubble">
+                                <div class="message">hello</div>
+                            </div>
+                            <div class="lower-text">Monday: 20:38</div>
+                      </div>
+                      <div class="card shadow-1">
+                        <div class="upper-text">Name</div>
+                            <div class="speech-bubble-2">
+                                <div class="message">hello</div>
+                            </div>
+                            <div class="lower-text">Monday: 20:38</div>
+                      </div>
+                      -->
+                      
+                      
+                    </div>
+                  </div>
+
+            </div>
+
+            <div id="typer">
+                
+                <form id="form">
+                    <input id="m" autocomplete="off" placeholder="Your message" />
+                    <button id="sendButton" class="btn" > Send</button>
+                </form>
+
+
+            </div>
+
+        </div>
+
+        
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="superadmin.css">
+    <title>BSOS SuperAdmin</title>
+</head>
+<body>
+    <form action="superadmin.php" method="POST">
+        <table  id='agentTable' align="center">
+            <tr>
+                <h2 id="header">
+                    Create New Admin Account
+                </h2>
+            </tr>
+            <tr >
+                <td id="agentName">
+                    Agent Name:
+                </td>
+                <td>
+                    <input type="text" id='userName' name="ad_name" placeholder="Name" required>
+                </td>
+            </tr>
+            <tr>
+                <td id="skillsTagHeader">
+                    Skill Tags: 
+                </td>
+                <td>
+                    <input type="checkbox" id="skill_tags1" name="skill_tags[]" value="Order Issues">
+                    <label for="skill_tags1" class="skill_tags">Order Issues</label><br>
+                    <input type="checkbox" id="skill_tags2" name="skill_tags[]" value="Payment">
+                    <label for="skill_tags2" class="skill_tags">Payment</label><br>
+                    <input type="checkbox" id="skill_tags3" name="skill_tags[]" value="Delivery">
+                    <label for="skill_tags3" class="skill_tags">Delivery</label><br>
+                    <input type="checkbox" id="skill_tags4" name="skill_tags[]" value="Returns & Refunds">
+                    <label for="skill_tags4" class="skill_tags">Returns & Refunds</label><br>
+                    <input type="checkbox" id="skill_tags5" name="skill_tags[]" value="Product Enquiry">
+                    <label for="skill_tags5" class="skill_tags">Product Enquiry</label><br>
+                    <input type="checkbox" id="skill_tags6" name="skill_tags[]" value="Stock Enquiry">
+                    <label for="skill_tags6" class="skill_tags">Stock Enquiry</label><br>
+                    <input type="checkbox" id="skill_tags7" name="skill_tags[]" value="Technical Issues">
+                    <label for="skill_tags7" class="skill_tags">Technical Issues</label><br>
+                    <input type="checkbox" id="skill_tags8" name="skill_tags[]" value="Promos & Gift Vouchers">
+                    <label for="skill_tags8" class="skill_tags">Promos & Gift Vouchers</label><br>
+                    <!--
+                    <select id="skill_tags" name="skill_tags[]" multiple>
+                        <option value="Order Issues">Order Issues</option>
+                        <option value="Payment">Payment</option>
+                        <option value="Delivery">Delivery</option>
+                        <option value="Returns & Refunds">Returns & Refunds</option>
+                        <option value="Product Enquiry">Product Enquiry</option>
+                        <option value="Stock Enquiry">Stock Enquiry</option>
+                        <option value="Technical Issues">Technical Issues</option>
+                        <option value="Promos & Gift Vouchers">Promos & Gift Vouchers</option>
+                    </select> 
+                -->
+                </td>
+            </tr>
+            <tr>
+                <td  id="buttonRow">
+                    
+                </td>
+            </tr>
+        </table>
+        <button id ='button' value='Submit' Type='Submit'> Submit</button>
+        
+    </form>
+</body>
+</html>

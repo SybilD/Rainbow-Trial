@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="5">  -->
+    <title>Loading...</title> 
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+    var final ='';
+    window.onload = function() {
+      $.get("/retrieve", function(data){
+        final= data;
+        console.log(final);
+        console.log(typeof final);
+      });
+    };
+
+    // jQuery convention for running when the document has been fully loaded:
+    $(document).ready(() => {
+      $('#QueueButton').click(() => {
+        const requestURL ='/name/'.concat(final);
+        console.log(requestURL);
+
+        $.get(requestURL,function(data){
+          console.log('You received some data!', data,typeof data);
+          if(data=='0'){
+            window.location.replace('http://localhost:3000/chatpage.html');
+
+          }
+          else{
+            $('#number').html('Number in queue is:' + data);
+          }
+          
+          //
+          // if(isNaN(data)){
+          //   
+          //   $('#number').html('Number in queue is:' + data);
+
+          // }
+          // else{
+          //   console.log(data);
+          //   window.location.replace(data);
+          // }
+          
+
+        })
+        // $.ajax({
+        //   url: requestURL,
+        //   type: 'POST',
+        //   dataType : 'json',
+        //   success: (data) => {
+        //     console.log('You received some data!', data);
+        //     
+        //   },
+        // });
+      });
+    });
+  </script>
+  </head>
+  <body>
+    
+    <div>
+      <p id='waitMessage' > We will attend to you shortly. Please CLICK twice to get your queue number <p> 
+      <button id="QueueButton">get queue number</button>
+      <p id = 'number'></p>
+      
+         
+    </div>
+  
+  </body>
+  <!-- <script src="script.js"></script> -->
+  <!-- <link rel="stylesheet" href="index.css"> -->
+</html>
+
+
+
+
+    <!-- What's the agent name? <input  id="insertedName" />
+    What's the agent skill? <input  id="insertedSkill" />
+		<button onclick="call.name(insertedName.value)">Say hello</button> -->
+

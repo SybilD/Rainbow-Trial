@@ -1,0 +1,488 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+
+/*/////////////////**/
+
+body {
+  background-color: #fff;
+  font-family: Lato;
+
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% 35% 35%;
+  grid-template-rows: 5% 15% 20% 20% 30% 10%;
+  width: 100vw;
+  height: 100vh;
+
+}
+/* 
+#nameDisplayed {
+
+  visibility: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-color: #006397;
+  color: #eee;
+  text-align: center;
+
+
+} */
+
+#login {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  z-index: 1;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+#login form {
+  width: 40%;
+  
+}
+
+
+
+
+#statusBar {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-color: #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-align: center;
+  grid-template-rows: 95% 5%;
+  grid-template-columns: 50% 50%;
+
+  
+}
+
+
+#signoutButton {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+}
+
+#connectionStatus {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2 ; 
+  background-color:#eee;
+  color: #006397;
+  text-align: center;
+}
+
+
+
+
+
+#line {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  width: 80%;
+  color: #aaa;
+  background-color: #aaa;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#conversationHeader {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  background-color: #006397;
+  color: #eee;
+  text-align: center;
+}
+
+
+
+/* #contactList {
+  grid-column: 1 / 2;
+  grid-row: 3 / 7;
+  background-color: #fff;
+  color: #333;
+  display: grid;
+  grid-template-rows: repeat(3, 30%);
+  visibility: hidden;
+
+} */
+
+#contactList > div {
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  transition: 0.2s;
+  font-size: 20px;
+  background-color: #eee;
+}
+#contactList div:hover {
+  background-color: #dddeee;
+}
+
+#chatMessages {
+  grid-column: 2 / 4;
+  grid-row: 2 / 6;
+  background-color: #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-left: 1px solid #aaa;
+  list-style-type: none;
+  overflow-y:scroll;
+}
+
+#chatMessages div {
+  padding: 5px;
+  margin-top: 5px;
+  min-height: 30px;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.leftSideMessage {
+  background-color: #0085ca !important;
+  color: #eee;
+  width: auto;
+  max-width: 55%;
+  padding: 3px;
+  margin-right: auto;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -moz-box-shadow: 0 1px 1px 0px #aaa;
+  -webkit-box-shadow: 0 1px 1px 0px #aaa;
+  box-shadow: 0 1px 1px 0px #aaa;
+  float: left;
+  clear: both;
+} 
+
+.rightSideMessage {
+  background-color: #0085ca !important;
+  color: #eee;
+  padding: 3px;
+  max-width: 55%;
+  float: right;
+  display: flex;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-box-shadow: 0 1px 1px 0px #aaa;
+  -webkit-box-shadow: 0 1px 1px 0px #aaa;
+  box-shadow: 0 1px 1px 0px #aaa;
+  clear: both;
+
+}
+
+.active {
+  background-color: #0085ca !important; 
+  color: #eee !important;
+}
+
+
+
+#typer {
+  grid-column: 2 / 4;
+  grid-row: 6 / 7 ;
+  background-color: #006397;
+  border-top: 1px solid #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #aaa;
+  transition: 0.2s;
+}
+
+#typer hover{
+  background-color: #0085ca;
+}
+
+#form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#m {
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  border: none;
+}
+
+#sendButton {
+  background-color: #006397;
+  color: #eee;
+}
+
+/****HeaderDesign****/
+.WelcomeHeader{
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  
+  padding: auto;
+
+
+
+}
+
+/***containers for login **/
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #f2f2f2;  
+}
+
+.wrap-login100 {
+  width: 390px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 77px 55px 33px 55px;
+
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  align-items: start;
+}
+
+#signInHeader {
+  padding-top: 2em;
+  font-size: 15px;
+  margin-left:2.5em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
+#username {
+  width: auto;
+  align-items: center;
+  margin-bottom: 0.5em;
+
+ 
+  
+}
+
+#password {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+
+.form-signin ng-pristine ng-valid{
+
+}
+
+#loginForm{
+  margin-right: auto;
+  margin-left: 3em;
+  margin-top: 2em;
+}
+
+#signInButton{
+  margin-left:1.5em;
+}
+
+ #contactList{
+
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  background-color: #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-align: center;
+  grid-template-rows: 95% 5%;
+  grid-template-columns: 100%;
+
+  }
+
+  #customerButton1{
+    background-color: #006397;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+
+/*
+  #signoutButton {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+  }
+  
+  #connectionStatus {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2 ; 
+    background-color:#eee;
+    color: #006397;
+    text-align: center;
+  }
+  */
+
+
+
+
+
+
+  .container {
+    display: grid;
+    grid-template-columns: 30px auto;
+    grid-gap: 2px 4px;
+    width: 360px;
+  }
+  
+  .upper-text {
+    color: black;
+    font-size: 12px;
+    line-height: 120%;
+    grid-column: 1 / 3;
+    grid-row: 1;
+    margin-left: 0.5em;
+  }
+  
+  .message-container {
+    width: auto;
+    height:inherit;
+  }
+  
+  .character-picture {
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 50%;
+    grid-row: 2;
+    margin-left: 0.5em;
+  }
+  
+  .speech-bubble {
+    background-color: #f0f0f0;
+    border-radius: 0 20px 20px 20px;
+    grid-column: 2 / 3;
+    grid-row: 2;
+    justify-self: auto;
+    display: grid;
+    padding: 10px;
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+
+  .speech-bubble-2 {
+    background-color: #cc8686;
+    border-radius: 0 20px 20px 20px;
+    grid-column: 2 / 3;
+    grid-row: 2;
+    justify-self: auto;
+    display: grid;
+    padding: 10px;
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+  
+  .message {
+    margin: auto 0;
+  }
+  
+  .lower-text {
+    color: black;
+    font-size: 12px;
+    line-height: 120%;
+    justify-self: end;
+    grid-column: 2 / 3;
+    grid-row: 3;
+    margin:0.5em;
+  }
+
+
+.card{
+  border: none;
+}
+  .shadow-1:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: inherit;
+    height: inherit;
+    z-index: -2;
+    border: none;
+    margin-top: 0em;
+  }
+  
+  .shadow-1:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: inherit;
+    height: inherit;
+    z-index: -2;
+    border: none;
+    margin-top: 0em;
+  }
