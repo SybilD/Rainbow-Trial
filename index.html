@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="5">  -->
+    <title>Loading...</title> 
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+    const final;
+    window.onload = function() {
+      $.get("/retrieve", function(data){
+        final= data;
+    });
+    };
+
+    // jQuery convention for running when the document has been fully loaded:
+    $(document).ready(() => {
+      $('#QueueButton').click(() => {
+        var data =final;
+        $.post("/name",function(data){
+        });
+        $.ajax({
+          url: '/name',
+          type: 'GET',
+          dataType : 'json',
+          success: (data) => {
+            console.log('You received some data!', data);
+            $('#status').html('All users: ' + data);
+          },
+        });
+      });
+    });
+  </script>
+  </head>
+  <body>
+    
+    <div id ='queueNumber'><p> Queue Number: <p> 
+    <br>
+      <p id='waitMessage' > We will attend to you shortly.  <p> 
+        <button id="QueueButton">get queue number</button>
+         
+    </div>
+  
+  </body>
+  <!-- <script src="script.js"></script> -->
+  <!-- <link rel="stylesheet" href="index.css"> -->
+</html>
+
+
+
+
+    <!-- What's the agent name? <input  id="insertedName" />
+    What's the agent skill? <input  id="insertedSkill" />
+		<button onclick="call.name(insertedName.value)">Say hello</button> -->
+

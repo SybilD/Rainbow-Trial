@@ -1,0 +1,9 @@
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = localhost:3000
+DNS.2 = localhost:3000/chatpage.html
+DNS.3 = localhost:3000/index.html
+DNS.4 = localhost:3000/BSOS.html

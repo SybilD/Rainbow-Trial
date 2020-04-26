@@ -1,0 +1,19 @@
+{
+  "name": "esc_bsos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "babel-jest": "^25.2.1",
+    "jest": "^25.2.2",
+    "jquery": "^3.4.1",
+    "rainbow-node-sdk": "^1.69.0",
+    "rainbow-web-sdk": "^1.67.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "C:/Users/hhhhhhh/Downloads/ESC_BSOS/chatpage/node_modules/http-server/bin/http-server -S -C localhost.crt -K localhost.key static/ -p 3000"
+  },
+  "author": "",
+  "license": "ISC"
+}

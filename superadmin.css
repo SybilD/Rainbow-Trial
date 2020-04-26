@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+
+#header{
+    text-align: center;
+    font-family:"Open Sans",serif;
+    color: #ffa41b;
+    border-style: double;
+    padding: 2em;
+
+}
+
+#agentName{
+    padding:2em;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}
+
+#agentTable{
+   
+    width:inherit;
+}
+
+.skill_tags{
+    padding-inline: 20em;
+    font-family: 'Sen', sans-serif;
+}
+
+#buttonRow{
+    padding: 1.5em;
+    align-self: center;
+}
+
+#button {
+    
+    
+    font-family: 'Roboto Slab', serif;
+    color: #000000;
+    display: inline-block;
+    font-size: 1em;
+    margin: auto;
+    padding: 10px;
+    text-decoration: none;
+    
+    transition: all 0.5s ease;
+    margin-left: 50%;
+    border-radius: 0.5em;
+    
+
+
+
+  }
+
+  .button:hover {
+    padding: 15px;
+  }
+
+  #skillsTagHeader{
+      padding-left: 3em;
+      font-size: large;
+      font-weight: bold;
+      font-family: 'Roboto Slab', serif;
+  }
+
+  #userName{
+    margin:15px 0;
+	padding:15px 10px;
+	width:100%;
+	outline:none;
+	border:1px solid #bbb;
+	border-radius:20px;
+	display:inline-block;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+    -webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+  }
