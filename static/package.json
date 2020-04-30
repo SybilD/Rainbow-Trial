@@ -7,7 +7,7 @@
     },
     "dependencies": {
         "express": "^4.13.4",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "mysql": "^2.10.2",
         "rainbow-node-sdk": "^1.69.0"
     },
